@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CyberShield | Auditoría Pro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // Representación TOON: Define estructura una vez, ahorra tokens
+        const toonData = "CyberShield{id,nombre,precio,moneda,nodos,soporte}\n:44,Auditoría_Pro,2500,USD,50,24/7";
+        
+        // El script parsea el TOON y lo renderiza igual que las otras
+        const [header, values] = toonData.split('\n');
+        const v = values.replace(':', '').split(',');
+
+        document.getElementById('app').innerHTML = `
+            <div class="hero"><h1>Protección Radical</h1><p>Seguridad de élite para infraestructuras críticas.</p></div>
+            <div class="service-card">
+                <span class="badge">Más vendido</span>
+                <h2>${v[1].replace('_',' ')}</h2>
+                <p class="marketing-text">Nuestro análisis insignia diseñado para empresas en crecimiento.</p>
+                <ul><li>${v[4]} Nodos activos</li><li>Soporte ${v[5]}</li></ul>
+                <div class="price">$${v[2]} <small>${v[3]}</small></div>
+                <button>Adquirir ahora (ID: ${v[0]})</button>
+            </div>`;
+    </script>
+</body>
+</html>

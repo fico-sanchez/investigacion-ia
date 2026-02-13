@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>CyberShield | Auditoría Pro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        // En un entorno real, esto vendría de un archivo data.json externo
+        const data = {
+            "empresa": "CyberShield",
+            "id": 44,
+            "nombre": "Auditoría Pro",
+            "precio": 2500,
+            "moneda": "USD",
+            "nodos": 50,
+            "soporte": "24/7"
+        };
+
+        document.getElementById('app').innerHTML = `
+            <div class="hero"><h1>Protección Radical</h1><p>Seguridad de élite para infraestructuras críticas.</p></div>
+            <div class="service-card">
+                <span class="badge">Más vendido</span>
+                <h2>${data.nombre}</h2>
+                <p class="marketing-text">Nuestro análisis insignia diseñado para empresas en crecimiento.</p>
+                <ul><li>${data.nodos} Nodos activos</li><li>Soporte ${data.soporte}</li></ul>
+                <div class="price">$${data.precio} <small>${data.moneda}</small></div>
+                <button>Adquirir ahora (ID: ${data.id})</button>
+            </div>`;
+    </script>
+</body>
+</html>
