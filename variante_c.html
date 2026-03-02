@@ -2,29 +2,41 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>CyberShield | Auditoría Pro</title>
+    <title>CyberShield | Auditoria Pro</title>
     <link rel="stylesheet" href="estilos.css">
+
+    <script id="ai-agent-data" type="text/plain">
+CyberShield{id,nombre,precio,moneda,nodos,soporte}
+:44,Auditoria_Pro,2500,USD,50,24/7
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Auditoria Pro",
+      "serviceType": "Auditoria Pro",
+      "sku": "44",
+      "offers": {
+        "@type": "Offer",
+        "price": "2500",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
 </head>
 <body>
-    <div id="app"></div>
-    <script>
-        // Representación TOON: Define estructura una vez, ahorra tokens
-        const toonData = "CyberShield{id,nombre,precio,moneda,nodos,soporte}\n:44,Auditoría_Pro,2500,USD,50,24/7";
-        
-        // El script parsea el TOON y lo renderiza igual que las otras
-        const [header, values] = toonData.split('\n');
-        const v = values.replace(':', '').split(',');
-
-        document.getElementById('app').innerHTML = `
-            <div class="hero"><h1>Protección Radical</h1><p>Seguridad de élite para infraestructuras críticas.</p></div>
-            <div class="service-card">
-                <span class="badge">Más vendido</span>
-                <h2>${v[1].replace('_',' ')}</h2>
-                <p class="marketing-text">Nuestro análisis insignia diseñado para empresas en crecimiento.</p>
-                <ul><li>${v[4]} Nodos activos</li><li>Soporte ${v[5]}</li></ul>
-                <div class="price">$${v[2]} <small>${v[3]}</small></div>
-                <button>Adquirir ahora (ID: ${v[0]})</button>
-            </div>`;
-    </script>
+    <div class="hero">
+        <h1>Proteccion Radical</h1>
+        <p>Seguridad de elite para infraestructuras criticas.</p>
+    </div>
+    <div class="service-card">
+        <span class="badge">Mas vendido</span>
+        <h2>Auditoria Pro</h2>
+        <p class="marketing-text">Nuestro analisis insignia disenado para empresas en crecimiento.</p>
+        <ul><li>50 Nodos activos</li><li>Soporte 24/7</li></ul>
+        <div class="price">$2,500 <small>USD</small></div>
+        <button>Adquirir ahora (ID: 44)</button>
+    </div>
 </body>
 </html>
